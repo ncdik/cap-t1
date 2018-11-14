@@ -21,3 +21,7 @@ hello();
 space();
 world();
 endl();
+world();
+space();
+hello();
+endl();
