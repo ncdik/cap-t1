@@ -11,11 +11,11 @@ set :user, 'mike' # пользователь удалённого сервера
 set :use_sudo, false # не запускать команды под sudo
 
 # Директория приложения на удалённом хостинге
-set :app_dir, "/home/mike/Deploy/cap-t1"
+# set :app_dir, "/home/mike/Deploy/cap-t1"
 # Запись "/home/zhukov/#{application}/" аналогична "/home/$user/$application/" в PHP
 
 # Директория, куда будет делаться checkout из репозитория
-set :deploy_to, "/home/mike/Deploy/cap-t1/deploy" # /home/myuser/myproject/deploy
+set :deploy_to, "/home/mike/docs/Sibers/projects/deploy/cap-t1" # /home/myuser/myproject/deploy
 
 # Настройки репозитория
 # set :scm, :git # используем subversion

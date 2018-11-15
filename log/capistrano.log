@@ -139,3 +139,701 @@
   INFO [6d2ea3c0] Running /usr/bin/env echo "Branch master (at fa7531e484c3a1e6cc80d68f6e1b93c5dad80a58) deployed as release 20181114050118 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
  DEBUG [6d2ea3c0] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at fa7531e484c3a1e6cc80d68f6e1b93c5dad80a58) deployed as release 20181114050118 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
   INFO [00b018a5] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-14 12:02:51 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b48d3751] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [b48d3751] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5f9b96f5] Finished in 3.279 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [24024805] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [24024805] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [b4ad45eb] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [b162b3d9] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [b162b3d9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [7e4005ed] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [7e4005ed] Finished in 2.237 seconds with exit status 0 (successful).
+  INFO [7ec72b53] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [7ec72b53] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [096f2ecb] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [2237b4c5] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [2237b4c5] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [9baec9c7] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [3974a4bb] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [3974a4bb] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [fc0a7c4b] 	fa7531e484c3a1e6cc80d68f6e1b93c5dad80a58
+ DEBUG [fc0a7c4b] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [2a69af12] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [2a69af12] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [2ec19820] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [83450aad] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [83450aad] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [19905d2a] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [32315723] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [32315723] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [c447ea1e] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [cddbd7e4] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [cddbd7e4] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [19a55792] 	Извлечение из origin
+ DEBUG [19a55792] 	Из github.com:ncdik/cap-t1
+   fa7531e..0ea12e4  master     -> master
+  INFO [19a55792] Finished in 2.545 seconds with exit status 0 (successful).
+ DEBUG [600545d8] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [600545d8] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [1b456786] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [43398712] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 on localhost
+ DEBUG [43398712] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 )
+  INFO [16c20bc7] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [a942851b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 on localhost
+ DEBUG [a942851b] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 )
+  INFO [98bf6e63] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [e9877f17] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [e9877f17] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [b834cc91] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [65716470] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [65716470] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8e5a9a58] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [8e5a9a58] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [397764cf] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114050257; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114050257'" 1>&2; false; fi on localhost
+ DEBUG [397764cf] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114050257; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114050257'" 1>&2; false; fi
+ DEBUG [7febc27a] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [23f3be59] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [23f3be59] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [0c6075ce] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [290fc12e] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [290fc12e] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [09138265] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [d471e633] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [d471e633] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [ec4a2874] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [582fd24e] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [582fd24e] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [c7305b61] 	20181114050118	20181114050257
+ DEBUG [c7305b61] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [a75c1423] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [a75c1423] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [9d73598a] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [70df1e4c] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114050257 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [70df1e4c] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114050257 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [43044432] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-14 12:05:15 +0700 cap staging deploy:rollback
+  INFO ---------------------------------------------------------------------------
+  INFO [74b51b7f] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [74b51b7f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f3287bfb] Finished in 5.171 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-staging-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-staging-mike.sh 100.0%
+  INFO [6edd23cf] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-staging-mike.sh on localhost
+ DEBUG [6edd23cf] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-staging-mike.sh
+  INFO [b0ef136e] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [6f534f08] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [6f534f08] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-staging-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [e7295f99] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [e7295f99] Finished in 2.264 seconds with exit status 0 (successful).
+  INFO [889c33e7] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [889c33e7] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [0823de38] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [aa62b176] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [aa62b176] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [7291294b] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [da89821f] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [da89821f] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [ca5837e6] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [ca5837e6] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [7452e42a] Running /usr/bin/env ls -xt /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [7452e42a] Command: /usr/bin/env ls -xt /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [ee1210ed] 	20181114050257	20181114050118
+ DEBUG [ee1210ed] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [4919287d] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050118 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [4919287d] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050118 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [7b4d59ae] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [f329427e] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [f329427e] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [5906973e] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [18fcf646] Running /usr/bin/env ls -xt /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [18fcf646] Command: /usr/bin/env ls -xt /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [cd2e8abf] 	20181114050257	20181114050118
+ DEBUG [cd2e8abf] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [ad4c836c] Running [ `readlink /home/mike/Deploy/cap-t1/deploy/current` != /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 ] on localhost
+ DEBUG [ad4c836c] Command: [ `readlink /home/mike/Deploy/cap-t1/deploy/current` != /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 ]
+ DEBUG [88225b88] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [c146daed] Running /usr/bin/env tar -czf /home/mike/Deploy/cap-t1/deploy/rolled-back-release-20181114050257.tar.gz /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 on localhost
+ DEBUG [c146daed] Command: /usr/bin/env tar -czf /home/mike/Deploy/cap-t1/deploy/rolled-back-release-20181114050257.tar.gz /home/mike/Deploy/cap-t1/deploy/releases/20181114050257
+ DEBUG [d18720fd] 	tar: Удаляется начальный `/' из имен объектов
+  INFO [d18720fd] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [39f3217d] Running /usr/bin/env rm -rf /home/mike/Deploy/cap-t1/deploy/releases/20181114050257 on localhost
+ DEBUG [39f3217d] Command: /usr/bin/env rm -rf /home/mike/Deploy/cap-t1/deploy/releases/20181114050257
+  INFO [7f22e4b4] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [0189e208] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [0189e208] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [76af38d0] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [45b47011] Running /usr/bin/env echo "mike rolled back to release 20181114050118" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [45b47011] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "mike rolled back to release 20181114050118" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [5d73a8dd] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-14 12:07:02 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [61fa0acc] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [61fa0acc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [183241d7] Finished in 3.473 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [d0bb4d04] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [d0bb4d04] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [b0030262] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [e6b2e180] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [e6b2e180] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [2500ec20] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [2500ec20] Finished in 2.724 seconds with exit status 0 (successful).
+  INFO [ab80b0b8] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [ab80b0b8] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [4efb2aea] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [b51a28cf] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [b51a28cf] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [397bfa07] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [9d96ca5b] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [9d96ca5b] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [9d983b29] 	fa7531e484c3a1e6cc80d68f6e1b93c5dad80a58
+ DEBUG [9d983b29] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [13db7103] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [13db7103] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [256efe6d] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [54d97da4] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [54d97da4] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [211dab61] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [1f8f0a40] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [1f8f0a40] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [8a3816fe] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [6876f671] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [6876f671] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2d886097] 	Извлечение из origin
+  INFO [2d886097] Finished in 2.285 seconds with exit status 0 (successful).
+ DEBUG [6500f4e9] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [6500f4e9] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [f445e042] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [c44b3cd9] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 on localhost
+ DEBUG [c44b3cd9] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 )
+  INFO [9a6b1ff2] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [1427ba3d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 on localhost
+ DEBUG [1427ba3d] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 )
+  INFO [245d896a] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [8f9d90f2] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [8f9d90f2] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [5296011d] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [7fbffaea] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [7fbffaea] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [bf711818] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [bf711818] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [875041bb] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114050709; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114050709'" 1>&2; false; fi on localhost
+ DEBUG [875041bb] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114050709; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114050709'" 1>&2; false; fi
+ DEBUG [26427eb6] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [be9727fd] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [be9727fd] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [92305f0e] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [b01456a6] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [b01456a6] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114050709 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [fa08054a] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [9ffa3ef4] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [9ffa3ef4] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [862627d4] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [55471b17] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [55471b17] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [626b9665] 	20181114050118	20181114050709
+ DEBUG [626b9665] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [dc1794d2] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [dc1794d2] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [c7017b6d] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [31cd7e1e] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114050709 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [31cd7e1e] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114050709 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [b8650a69] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-14 12:28:35 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [54f173ea] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [54f173ea] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7314cecc] Finished in 0.459 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [49fc26a1] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [49fc26a1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [ca7417cc] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [c5ebbf4e] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [c5ebbf4e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [d4513d5f] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [d4513d5f] Finished in 2.300 seconds with exit status 0 (successful).
+  INFO [cc807b98] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [cc807b98] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [28b1566a] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [38a15a97] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [38a15a97] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [70fd7ac4] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [85c1780a] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [85c1780a] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [4550e3a3] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [4550e3a3] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [bc58befb] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [bc58befb] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [6987f879] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [32e61a77] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [32e61a77] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [4afd939f] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [16c9205e] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [16c9205e] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [83d12d67] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [9b04bd63] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [9b04bd63] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d94253eb] 	Извлечение из origin
+  INFO [d94253eb] Finished in 2.262 seconds with exit status 0 (successful).
+ DEBUG [1175521e] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [1175521e] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [db94e220] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [85d41be2] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 on localhost
+ DEBUG [85d41be2] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 )
+  INFO [b0832a79] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [98e0e059] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 on localhost
+ DEBUG [98e0e059] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 )
+  INFO [0b552e88] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [70bcfb6b] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [70bcfb6b] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [cad791d7] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [803b0fcb] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [803b0fcb] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c8d4d94e] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [c8d4d94e] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [aed2c76d] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114052838; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114052838'" 1>&2; false; fi on localhost
+ DEBUG [aed2c76d] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114052838; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114052838'" 1>&2; false; fi
+ DEBUG [353418b4] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [c52eafb0] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [c52eafb0] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [76dda9d0] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [e740c302] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [e740c302] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114052838 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [0f3b9539] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [7e8dea59] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [7e8dea59] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [d9591133] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [a1595cab] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [a1595cab] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [9b136ba1] 	20181114050118	20181114050709	20181114052838
+ DEBUG [9b136ba1] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [2d7742ef] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [2d7742ef] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [6152a98d] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [1ce684d0] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114052838 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [1ce684d0] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114052838 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [445a43d7] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-14 12:39:09 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [aa3f8084] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [aa3f8084] Command: /usr/bin/env mkdir -p /tmp
+  INFO [aadf850b] Finished in 0.471 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [b2c6c46a] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [b2c6c46a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [2580c153] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [5ebaaec0] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [5ebaaec0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [8552e5b4] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [8552e5b4] Finished in 2.361 seconds with exit status 0 (successful).
+  INFO [eabfe4a1] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [eabfe4a1] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [1b417e18] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [aa10ffff] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [aa10ffff] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [d217cdfb] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [dac6beb6] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [dac6beb6] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [af867c8c] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [af867c8c] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [b0bb1233] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [b0bb1233] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [3a6478fd] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [33bfa331] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [33bfa331] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [b6d970bd] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [bedc8af1] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [bedc8af1] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [3d9b993b] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [281c9df1] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [281c9df1] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e13cb2a7] 	Извлечение из origin
+  INFO [e13cb2a7] Finished in 2.290 seconds with exit status 0 (successful).
+ DEBUG [db215b0b] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [db215b0b] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [2330738d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [07e2c9c3] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 on localhost
+ DEBUG [07e2c9c3] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 )
+  INFO [b642bb3c] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [17dc5267] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 on localhost
+ DEBUG [17dc5267] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 )
+  INFO [51654bf6] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [d37da30a] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [d37da30a] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [ac3afa3e] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [25fd86c3] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [25fd86c3] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [102a8167] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [102a8167] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [f9553477] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114053912; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114053912'" 1>&2; false; fi on localhost
+ DEBUG [f9553477] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181114053912; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181114053912'" 1>&2; false; fi
+ DEBUG [bc4ff047] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [d97605a6] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [d97605a6] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [e915efd9] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [8d647d27] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [8d647d27] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181114053912 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [6795d1c9] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [7fa3a058] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [7fa3a058] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [e4ce4526] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [30313bf7] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [30313bf7] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [17547e5e] 	20181114050118	20181114050709	20181114052838	20181114053912
+ DEBUG [17547e5e] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [ab3aad6e] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [ab3aad6e] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [b1e74d16] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [9c69a5e9] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114053912 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [9c69a5e9] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181114053912 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [c539bb8f] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:00:22 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [701b5aba] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [701b5aba] Command: /usr/bin/env mkdir -p /tmp
+  INFO [acd90210] Finished in 0.449 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [b0387d7a] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [b0387d7a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [0f7c36dc] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [09c8e109] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [09c8e109] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [bf21df1f] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [bf21df1f] Finished in 2.564 seconds with exit status 0 (successful).
+  INFO [c25536f8] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [c25536f8] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [e8ce7a1c] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [a66571d5] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [a66571d5] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [048267d7] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [09521425] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [09521425] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [bb11d66b] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [bb11d66b] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [8f2f71b1] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [8f2f71b1] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [911c19e9] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [af611ca8] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [af611ca8] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [25bda0ce] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [de6d4691] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [de6d4691] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [60956dbc] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [a9f40ee5] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [a9f40ee5] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ff2c75c9] 	Извлечение из origin
+  INFO [ff2c75c9] Finished in 2.265 seconds with exit status 0 (successful).
+ DEBUG [d5b7eb60] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [d5b7eb60] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [6d77c6d6] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [a9c34afb] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 on localhost
+ DEBUG [a9c34afb] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 )
+  INFO [96feee8d] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [d6facf4e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 on localhost
+ DEBUG [d6facf4e] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 )
+  INFO [1bbe95ac] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [c7afdff2] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [c7afdff2] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [5c4bcd41] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [bec1ac88] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [bec1ac88] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [48975b41] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [48975b41] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [d31cfdfd] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181115040025; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181115040025'" 1>&2; false; fi on localhost
+ DEBUG [d31cfdfd] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181115040025; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181115040025'" 1>&2; false; fi
+ DEBUG [f8a47167] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [42e8240f] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [42e8240f] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [8b79a433] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [d462ff77] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [d462ff77] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181115040025 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [78f4c9ed] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [1aa4fcc9] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [1aa4fcc9] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [84a93239] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [81b3da44] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [81b3da44] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [c8a7d3c8] 	20181114050118	20181114050709	20181114052838	20181114053912	20181115040025
+ DEBUG [c8a7d3c8] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on localhost
+ DEBUG [11f73483] Running [ -d /home/mike/Deploy/cap-t1/deploy/current ] on localhost
+ DEBUG [11f73483] Command: [ -d /home/mike/Deploy/cap-t1/deploy/current ]
+ DEBUG [1a103cb7] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [c0f9da61] Running /usr/bin/env readlink /home/mike/Deploy/cap-t1/deploy/current on localhost
+ DEBUG [c0f9da61] Command: /usr/bin/env readlink /home/mike/Deploy/cap-t1/deploy/current
+ DEBUG [e3b890e8] 	/home/mike/Deploy/cap-t1/deploy/releases/20181115040025
+ DEBUG [e3b890e8] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO No old releases (keeping newest 5) on localhost
+ DEBUG [7d540bcb] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [7d540bcb] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [de712659] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [c4d0d87e] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040025 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [c4d0d87e] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040025 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [c551d37a] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:01:57 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c2626b0d] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [c2626b0d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4c99d26e] Finished in 0.442 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [6d198bf5] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [6d198bf5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [97e22550] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [93a1a13f] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [93a1a13f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [7475c373] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [7475c373] Finished in 2.391 seconds with exit status 0 (successful).
+  INFO [24da0ec0] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [24da0ec0] Command: /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/shared /home/mike/Deploy/cap-t1/deploy/releases
+  INFO [f20e4f21] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [a0fd1577] Running [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ] on localhost
+ DEBUG [a0fd1577] Command: [ -f /home/mike/Deploy/cap-t1/deploy/current/REVISION ]
+ DEBUG [b62eaf56] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [67adee16] Running /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null on localhost
+ DEBUG [67adee16] Command: /usr/bin/env cat /home/mike/Deploy/cap-t1/deploy/current/REVISION 2>/dev/null
+ DEBUG [c262c54e] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [c262c54e] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [2fa8693b] Running [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ] on localhost
+ DEBUG [2fa8693b] Command: [ -f /home/mike/Deploy/cap-t1/deploy/repo/HEAD ]
+ DEBUG [1eeab026] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/mike/Deploy/cap-t1/deploy/repo
+ DEBUG [99a2a20c] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [99a2a20c] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [ce8f1d71] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [4f9403cd] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [4f9403cd] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [94dca51d] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [ee8473e0] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [ee8473e0] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6ef350d2] 	Извлечение из origin
+  INFO [6ef350d2] Finished in 3.584 seconds with exit status 0 (successful).
+ DEBUG [0a0cac67] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [0a0cac67] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [4f07f382] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [a08fde03] Running /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 on localhost
+ DEBUG [a08fde03] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 )
+  INFO [0ce23a6d] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [f378b607] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 on localhost
+ DEBUG [f378b607] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 )
+  INFO [4be5b200] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [34880da0] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi on localhost
+ DEBUG [34880da0] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/repo; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/repo'" 1>&2; false; fi
+ DEBUG [289b542f] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [d045277b] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [d045277b] Command: cd /home/mike/Deploy/cap-t1/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [76f5c63f] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [76f5c63f] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [cb2ad111] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181115040200; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181115040200'" 1>&2; false; fi on localhost
+ DEBUG [cb2ad111] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases/20181115040200; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases/20181115040200'" 1>&2; false; fi
+ DEBUG [d1c5cf21] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [b2816464] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [b2816464] Command: cd /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [32517697] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [2d395d9a] Running /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 /home/mike/Deploy/cap-t1/deploy/releases/current on localhost
+ DEBUG [2d395d9a] Command: /usr/bin/env ln -s /home/mike/Deploy/cap-t1/deploy/releases/20181115040200 /home/mike/Deploy/cap-t1/deploy/releases/current
+  INFO [1638e096] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [d99e6867] Running /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy on localhost
+ DEBUG [d99e6867] Command: /usr/bin/env mv /home/mike/Deploy/cap-t1/deploy/releases/current /home/mike/Deploy/cap-t1/deploy
+  INFO [c6dbde8f] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [c72d7ab1] Running /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases on localhost
+ DEBUG [c72d7ab1] Command: /usr/bin/env ls -x /home/mike/Deploy/cap-t1/deploy/releases
+ DEBUG [5818bb24] 	20181114050118	20181114050709	20181114052838	20181114053912	20181115040025
+20181115040200
+ DEBUG [5818bb24] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on localhost
+ DEBUG [836ce66e] Running [ -d /home/mike/Deploy/cap-t1/deploy/current ] on localhost
+ DEBUG [836ce66e] Command: [ -d /home/mike/Deploy/cap-t1/deploy/current ]
+ DEBUG [e9a77c84] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [37a181b3] Running /usr/bin/env readlink /home/mike/Deploy/cap-t1/deploy/current on localhost
+ DEBUG [37a181b3] Command: /usr/bin/env readlink /home/mike/Deploy/cap-t1/deploy/current
+ DEBUG [0aa9deb0] 	/home/mike/Deploy/cap-t1/deploy/releases/20181115040200
+ DEBUG [0aa9deb0] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [6b1ccf9c] Running /usr/bin/env rm -rf /home/mike/Deploy/cap-t1/deploy/releases/20181114050118 on localhost
+ DEBUG [6b1ccf9c] Command: /usr/bin/env rm -rf /home/mike/Deploy/cap-t1/deploy/releases/20181114050118
+  INFO [ffd84676] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [da462ebc] Running if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi on localhost
+ DEBUG [da462ebc] Command: if test ! -d /home/mike/Deploy/cap-t1/deploy/releases; then echo "Directory does not exist '/home/mike/Deploy/cap-t1/deploy/releases'" 1>&2; false; fi
+ DEBUG [2b6d5f59] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [eba982bf] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040200 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log on localhost
+ DEBUG [eba982bf] Command: cd /home/mike/Deploy/cap-t1/deploy/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040200 by mike" >> /home/mike/Deploy/cap-t1/deploy/revisions.log
+  INFO [f89b335c] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:04:48 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e9c593ef] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [e9c593ef] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e97fc929] Finished in 0.431 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [6523784c] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [6523784c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [6ea3d6b7] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [6f2e2b1f] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [6f2e2b1f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [92f61763] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [92f61763] Finished in 2.257 seconds with exit status 0 (successful).
+  INFO [748f5460] Running /usr/bin/env mkdir -p /home/mike/docs/Sibers/projets/deploy/cap-t1/shared /home/mike/docs/Sibers/projets/deploy/cap-t1/releases on localhost
+ DEBUG [748f5460] Command: /usr/bin/env mkdir -p /home/mike/docs/Sibers/projets/deploy/cap-t1/shared /home/mike/docs/Sibers/projets/deploy/cap-t1/releases
+  INFO [f6b4f43b] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [4a8cb134] Running [ -f /home/mike/docs/Sibers/projets/deploy/cap-t1/current/REVISION ] on localhost
+ DEBUG [4a8cb134] Command: [ -f /home/mike/docs/Sibers/projets/deploy/cap-t1/current/REVISION ]
+ DEBUG [285994bd] Finished in 0.050 seconds with exit status 1 (failed).
+ DEBUG [69b1575b] Running [ -f /home/mike/docs/Sibers/projets/deploy/cap-t1/repo/HEAD ] on localhost
+ DEBUG [69b1575b] Command: [ -f /home/mike/docs/Sibers/projets/deploy/cap-t1/repo/HEAD ]
+ DEBUG [0ecb93de] Finished in 0.048 seconds with exit status 1 (failed).
+ DEBUG [bd86c158] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1'" 1>&2; false; fi on localhost
+ DEBUG [bd86c158] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1'" 1>&2; false; fi
+ DEBUG [0918e40c] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [a903b54c] Running /usr/bin/env git clone --mirror git@github.com:ncdik/cap-t1.git /home/mike/docs/Sibers/projets/deploy/cap-t1/repo on localhost
+ DEBUG [a903b54c] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1 && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git clone --mirror git@github.com:ncdik/cap-t1.git /home/mike/docs/Sibers/projets/deploy/cap-t1/repo )
+ DEBUG [355b6976] 	Клонирование в голый репозиторий «/home/mike/docs/Sibers/projets/deploy/cap-t1/repo»…
+  INFO [355b6976] Finished in 2.496 seconds with exit status 0 (successful).
+ DEBUG [ffc2ec97] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [ffc2ec97] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [40b86dc1] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [b001eeee] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [b001eeee] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [e5e48046] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [19cb5bbe] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [19cb5bbe] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [46b5bae0] 	Извлечение из origin
+  INFO [46b5bae0] Finished in 2.329 seconds with exit status 0 (successful).
+ DEBUG [dc9e3faf] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [dc9e3faf] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [b3b137d3] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [43daf0bd] Running /usr/bin/env mkdir -p /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 on localhost
+ DEBUG [43daf0bd] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 )
+  INFO [2a8bbb35] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [38754297] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 on localhost
+ DEBUG [38754297] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 )
+  INFO [1b74a938] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [95814a90] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [95814a90] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [7b276a98] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [b06d1461] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [b06d1461] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3350b41b] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [3350b41b] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [72f486fe] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450'" 1>&2; false; fi on localhost
+ DEBUG [72f486fe] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450'" 1>&2; false; fi
+ DEBUG [89f66298] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [b1f541fc] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [b1f541fc] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [5a27d02c] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [32ec6f16] Running /usr/bin/env ln -s /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/current on localhost
+ DEBUG [32ec6f16] Command: /usr/bin/env ln -s /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/20181115040450 /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/current
+  INFO [6ee4db11] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [69168968] Running /usr/bin/env mv /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/current /home/mike/docs/Sibers/projets/deploy/cap-t1 on localhost
+ DEBUG [69168968] Command: /usr/bin/env mv /home/mike/docs/Sibers/projets/deploy/cap-t1/releases/current /home/mike/docs/Sibers/projets/deploy/cap-t1
+  INFO [dff21d3c] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [1bf12750] Running /usr/bin/env ls -x /home/mike/docs/Sibers/projets/deploy/cap-t1/releases on localhost
+ DEBUG [1bf12750] Command: /usr/bin/env ls -x /home/mike/docs/Sibers/projets/deploy/cap-t1/releases
+ DEBUG [1ce62f6e] 	20181115040450
+ DEBUG [1ce62f6e] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [e5c82c65] Running if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/releases; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/releases'" 1>&2; false; fi on localhost
+ DEBUG [e5c82c65] Command: if test ! -d /home/mike/docs/Sibers/projets/deploy/cap-t1/releases; then echo "Directory does not exist '/home/mike/docs/Sibers/projets/deploy/cap-t1/releases'" 1>&2; false; fi
+ DEBUG [cae4e39f] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [e457a991] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040450 by mike" >> /home/mike/docs/Sibers/projets/deploy/cap-t1/revisions.log on localhost
+ DEBUG [e457a991] Command: cd /home/mike/docs/Sibers/projets/deploy/cap-t1/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040450 by mike" >> /home/mike/docs/Sibers/projets/deploy/cap-t1/revisions.log
+  INFO [8e775885] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:05:57 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [645526c5] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [645526c5] Command: /usr/bin/env mkdir -p /tmp
+  INFO [04233666] Finished in 0.432 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap-t1-tst-production-mike.sh 100.0%
+  INFO [99abcb73] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh on localhost
+ DEBUG [99abcb73] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap-t1-tst-production-mike.sh
+  INFO [d2aa0682] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [920d6b49] Running /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD on localhost
+ DEBUG [920d6b49] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:ncdik/cap-t1.git HEAD )
+ DEBUG [bfbe3f27] 	0ea12e4c309370d965dda26a8bbe514e1e526be7	HEAD
+  INFO [bfbe3f27] Finished in 2.332 seconds with exit status 0 (successful).
+  INFO [3a4794b2] Running /usr/bin/env mkdir -p /home/mike/docs/Sibers/projects/deploy/cap-t1/shared /home/mike/docs/Sibers/projects/deploy/cap-t1/releases on localhost
+ DEBUG [3a4794b2] Command: /usr/bin/env mkdir -p /home/mike/docs/Sibers/projects/deploy/cap-t1/shared /home/mike/docs/Sibers/projects/deploy/cap-t1/releases
+  INFO [326d3e22] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [d1dd7e47] Running [ -f /home/mike/docs/Sibers/projects/deploy/cap-t1/current/REVISION ] on localhost
+ DEBUG [d1dd7e47] Command: [ -f /home/mike/docs/Sibers/projects/deploy/cap-t1/current/REVISION ]
+ DEBUG [aaf83f5b] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [aa61b1ed] Running [ -f /home/mike/docs/Sibers/projects/deploy/cap-t1/repo/HEAD ] on localhost
+ DEBUG [aa61b1ed] Command: [ -f /home/mike/docs/Sibers/projects/deploy/cap-t1/repo/HEAD ]
+ DEBUG [62035f46] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [27f699db] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1'" 1>&2; false; fi on localhost
+ DEBUG [27f699db] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1'" 1>&2; false; fi
+ DEBUG [1931dd28] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [67d14e32] Running /usr/bin/env git clone --mirror git@github.com:ncdik/cap-t1.git /home/mike/docs/Sibers/projects/deploy/cap-t1/repo on localhost
+ DEBUG [67d14e32] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1 && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git clone --mirror git@github.com:ncdik/cap-t1.git /home/mike/docs/Sibers/projects/deploy/cap-t1/repo )
+ DEBUG [94cb8c35] 	Клонирование в голый репозиторий «/home/mike/docs/Sibers/projects/deploy/cap-t1/repo»…
+  INFO [94cb8c35] Finished in 3.921 seconds with exit status 0 (successful).
+ DEBUG [756a633b] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [756a633b] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [c1414b4d] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [1ee7f632] Running /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git on localhost
+ DEBUG [1ee7f632] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:ncdik/cap-t1.git )
+  INFO [d921e3ee] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [e055dd66] Running /usr/bin/env git remote update --prune on localhost
+ DEBUG [e055dd66] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1b5d03ad] 	Извлечение из origin
+  INFO [1b5d03ad] Finished in 3.558 seconds with exit status 0 (successful).
+ DEBUG [c0538076] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [c0538076] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [65ede354] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [18d3530b] Running /usr/bin/env mkdir -p /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 on localhost
+ DEBUG [18d3530b] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env mkdir -p /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 )
+  INFO [c6d9b943] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [ba21de57] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 on localhost
+ DEBUG [ba21de57] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 )
+  INFO [998379d7] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [df649550] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi on localhost
+ DEBUG [df649550] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/repo; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/repo'" 1>&2; false; fi
+ DEBUG [08090e82] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [cb49a73f] Running /usr/bin/env git rev-list --max-count=1 master on localhost
+ DEBUG [cb49a73f] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap-t1-tst-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6c1a49d0] 	0ea12e4c309370d965dda26a8bbe514e1e526be7
+ DEBUG [6c1a49d0] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [48505f1d] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600'" 1>&2; false; fi on localhost
+ DEBUG [48505f1d] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600'" 1>&2; false; fi
+ DEBUG [efb2a63a] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [6df5f069] Running /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION on localhost
+ DEBUG [6df5f069] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 && /usr/bin/env echo "0ea12e4c309370d965dda26a8bbe514e1e526be7" > REVISION
+  INFO [2ae03074] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [d0cc1793] Running /usr/bin/env ln -s /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/current on localhost
+ DEBUG [d0cc1793] Command: /usr/bin/env ln -s /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/20181115040600 /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/current
+  INFO [77b1aca0] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [a2595b7e] Running /usr/bin/env mv /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/current /home/mike/docs/Sibers/projects/deploy/cap-t1 on localhost
+ DEBUG [a2595b7e] Command: /usr/bin/env mv /home/mike/docs/Sibers/projects/deploy/cap-t1/releases/current /home/mike/docs/Sibers/projects/deploy/cap-t1
+  INFO [97e35c77] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [54b7ecdf] Running /usr/bin/env ls -x /home/mike/docs/Sibers/projects/deploy/cap-t1/releases on localhost
+ DEBUG [54b7ecdf] Command: /usr/bin/env ls -x /home/mike/docs/Sibers/projects/deploy/cap-t1/releases
+ DEBUG [526c9ec0] 	20181115040600
+ DEBUG [526c9ec0] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [846c7a58] Running if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/releases; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/releases'" 1>&2; false; fi on localhost
+ DEBUG [846c7a58] Command: if test ! -d /home/mike/docs/Sibers/projects/deploy/cap-t1/releases; then echo "Directory does not exist '/home/mike/docs/Sibers/projects/deploy/cap-t1/releases'" 1>&2; false; fi
+ DEBUG [d3d286c4] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [73b704b0] Running /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040600 by mike" >> /home/mike/docs/Sibers/projects/deploy/cap-t1/revisions.log on localhost
+ DEBUG [73b704b0] Command: cd /home/mike/docs/Sibers/projects/deploy/cap-t1/releases && /usr/bin/env echo "Branch master (at 0ea12e4c309370d965dda26a8bbe514e1e526be7) deployed as release 20181115040600 by mike" >> /home/mike/docs/Sibers/projects/deploy/cap-t1/revisions.log
+  INFO [5c28c92c] Finished in 0.054 seconds with exit status 0 (successful).
